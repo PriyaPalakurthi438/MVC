@@ -1,0 +1,23 @@
+﻿@{
+    ViewData["Title"] = "Home";
+    ViewData["Heading"] = " Priya";
+}
+@model User;
+<div class="text-center">
+
+  
+@using (Html.BeginForm("SaveUser", "Home"))
+{
+    <p>
+        
+   User: @Html.TextBoxFor(User => User.UserName)
+   Password:  @Html.PasswordFor(User => User.Password)
+    </p>
+
+    
+    <input type="submit" value="Add User" />
+}
+
+
+    
+</div>

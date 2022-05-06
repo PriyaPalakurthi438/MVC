@@ -1,0 +1,24 @@
+﻿@{
+    ViewData["Title"] = "Home";
+    ViewData["Heading"] = " Priya";
+}
+@model User;
+<div class="text-center">
+
+  
+@using (Html.BeginForm("printUser", "Home"))
+{
+    <p>
+        
+   User: @Html.TextBoxFor(User => User.UserName)
+   Password:  @Html.PasswordFor(User => User.Password)
+   HOBBIES: @Html.CheckBox("checkbox1", true) CheckBox1 
+    </p>
+
+    
+    <input type="submit" value="Add User" />
+}
+
+
+    
+</div>
